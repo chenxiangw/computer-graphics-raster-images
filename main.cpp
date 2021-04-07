@@ -54,12 +54,12 @@ int main(int argc, char *argv[])
   // Convert to gray
   std::vector<unsigned char> gray;
   rgb_to_gray(rgb,width,height,gray);
-  write_ppm("gray.ppm",gray,width,height,1);
+  write_ppm("gray.pgm",gray,width,height,1);
 
   // Create fake bayer mosaic image
   std::vector<unsigned char> bayer;
   simulate_bayer_mosaic(rgb,width,height,bayer);
-  write_ppm("bayer.ppm",bayer,width,height,1);
+  write_ppm("bayer.pgm",bayer,width,height,1);
 
   // Demosaic that output
   std::vector<unsigned char> demosaicked;
